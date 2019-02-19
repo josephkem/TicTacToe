@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button,Container,Jumbotron } from 'reactstrap';
 import './index.css';
 
 
 function Square(props) {
   return (
-    <button className="square" onClick={props.onClick}>
+    <Button color = "info" className="square" onClick={props.onClick}>
       {props.value}
-    </button>
+    </Button>
   );
 }
 
@@ -54,7 +56,7 @@ class Board extends React.Component {
 
     return (
       <div>
-        <div className="status">{status}</div>
+        <div className="status"><h3>{status}</h3></div>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
@@ -78,15 +80,30 @@ class Board extends React.Component {
 class Game extends React.Component {
   render() {
     return (
-      <div className="game">
-        <div className="game-board">
+
+      <div>
+
+        <Jumbotron id = "header"><h1>TicTacToe</h1></Jumbotron>
+        <div className="game">
+
+        <Container id = "game">
+
+          <div className="game-board">
           <Board />
-        </div>
+          </div>
+        
+        </Container>
+        
         <div className="game-info">
           <div>{/* status */}</div>
           <ol>{/* TODO */}</ol>
         </div>
       </div>
+      
+      </div>
+
+
+      
     );
   }
 }
