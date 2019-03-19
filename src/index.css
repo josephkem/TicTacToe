@@ -1,6 +1,7 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  background: linear-gradient(to bottom left, #2e2e2e 0%, #101010 85%);
 }
 
 ol, ul {
@@ -23,6 +24,7 @@ ol, ul {
 .status {
   margin-bottom: 10px;
   text-align: center;
+  color:white;
 }
 
 h1 {
@@ -30,12 +32,13 @@ h1 {
 }
 
 #header {
-  background-color: red;
+  background-color: purple;
   padding: 8px;
 }
 
 .square {
  background-color: black;
+ color:purple;
   float: left;
   font-size: 35px;
   font-weight: bold;

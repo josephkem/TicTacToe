@@ -7,7 +7,7 @@ import './index.css';
 
 function Square(props) {
   return (
-    <Button color = "info" className="square" onClick={props.onClick}>
+    <Button color = "secondary" className="square" onClick={props.onClick}>
       {props.value}
     </Button>
   );
