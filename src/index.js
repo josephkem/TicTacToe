@@ -39,6 +39,7 @@ class Board extends React.Component {
   renderSquare(i) {
     return  (
       <Square
+      
         value={this.state.squares[i]}
         onClick={() => this.handleClick(i)}
       />
@@ -56,7 +57,7 @@ class Board extends React.Component {
 
     return (
       <div>
-        <div className="status"><h3>{status}</h3></div>
+        <div className="status"><h3 class="animated infinite bounce delay-2s">{status}</h3></div>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
